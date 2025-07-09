@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class TestOne {
     @Test
-    public void login() throws InterruptedException {
+    public void login() {
         System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver-win64\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         WebDriver driver=new ChromeDriver(options);
@@ -26,8 +26,8 @@ public class TestOne {
         WebElement login=driver.findElement(By.id("sign_in_btn"));
         wait.until(d -> tablets.isDisplayed());
         profile.click();
-        username.sendKeys("admin");
-        password.sendKeys("adm1n");
+        username.sendKeys("aakash");
+        password.sendKeys("Password1");
         login.click();
     }
 }
